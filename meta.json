@@ -1,0 +1,233 @@
+{
+ "full": {
+  "features": [
+   "HighBP",
+   "HighChol",
+   "CholCheck",
+   "BMI",
+   "Smoker",
+   "Stroke",
+   "HeartDiseaseorAttack",
+   "PhysActivity",
+   "Fruits",
+   "Veggies",
+   "HvyAlcoholConsump",
+   "AnyHealthcare",
+   "NoDocbcCost",
+   "GenHlth",
+   "MentHlth",
+   "PhysHlth",
+   "DiffWalk",
+   "Sex",
+   "Age",
+   "Education",
+   "Income"
+  ],
+  "thr_high": 0.14160105201275935,
+  "thr_low": 0.054065672710220954,
+  "metrics": {
+   "Threshold": 0.142,
+   "ROC_AUC": 0.819,
+   "PR_AUC": 0.4459,
+   "Recall": 0.8121,
+   "Precision": 0.3098,
+   "F1": 0.4485
+  }
+ },
+ "short": {
+  "features": [
+   "GenHlth",
+   "BMI",
+   "Age",
+   "HighBP",
+   "HighChol",
+   "CholCheck",
+   "HvyAlcoholConsump"
+  ],
+  "thr_high": 0.1421244197243803,
+  "thr_low": 0.0528802511509738,
+  "metrics": {
+   "questions": 7.0,
+   "thr_high": 0.1421244197243803,
+   "thr_low": 0.0528802511509738,
+   "ROC_AUC": 0.813415267931863,
+   "PR_AUC": 0.4366382306585583,
+   "Recall": 0.8076649095312722,
+   "Precision": 0.30093428177088866,
+   "F1": 0.4384886104343118
+  }
+ },
+ "importance": {
+  "GenHlth": 0.05276,
+  "BMI": 0.0407,
+  "Age": 0.03443,
+  "HighBP": 0.01473,
+  "HighChol": 0.01138,
+  "CholCheck": 0.00753,
+  "HvyAlcoholConsump": 0.00527,
+  "Sex": 0.00331,
+  "HeartDiseaseorAttack": 0.00288,
+  "Income": 0.0021,
+  "DiffWalk": 0.00151,
+  "MentHlth": 0.00124,
+  "Education": 0.00054,
+  "Stroke": 0.00048,
+  "PhysHlth": 0.00029,
+  "NoDocbcCost": 0.00011,
+  "AnyHealthcare": 0.00011,
+  "Fruits": 4e-05,
+  "PhysActivity": -2e-05,
+  "Veggies": -8e-05,
+  "Smoker": -0.00015
+ },
+ "prevalence": 0.1529454317264701,
+ "n_rows": 229474,
+ "n_raw": 253680,
+ "bands": [
+  {
+   "band": "Low",
+   "people": 16347,
+   "diabetes_rate": 0.0194,
+   "share_of_people": 0.3562,
+   "share_of_all_cases": 0.0452
+  },
+  {
+   "band": "Moderate",
+   "people": 11149,
+   "diabetes_rate": 0.0899,
+   "share_of_people": 0.2429,
+   "share_of_all_cases": 0.1428
+  },
+  {
+   "band": "High",
+   "people": 18399,
+   "diabetes_rate": 0.3098,
+   "share_of_people": 0.4009,
+   "share_of_all_cases": 0.8121
+  }
+ ],
+ "cm": {
+  "tn": 26177,
+  "fp": 12699,
+  "fn": 1319,
+  "tp": 5700
+ },
+ "best_params": {
+  "m__min_samples_leaf": 100,
+  "m__max_leaf_nodes": 31,
+  "m__max_iter": 150,
+  "m__learning_rate": 0.05,
+  "m__l2_regularization": 5
+ },
+ "cv": [
+  {
+   "Model": "Baseline (majority)",
+   "CV ROC-AUC": 0.5,
+   "std": 0.0,
+   "CV Recall @0.5": 0.0
+  },
+  {
+   "Model": "Logistic Regression",
+   "CV ROC-AUC": 0.8067,
+   "std": 0.001,
+   "CV Recall @0.5": 0.7538
+  },
+  {
+   "Model": "Random Forest",
+   "CV ROC-AUC": 0.8127,
+   "std": 0.001,
+   "CV Recall @0.5": 0.7338
+  },
+  {
+   "Model": "Gradient Boosting",
+   "CV ROC-AUC": 0.8147,
+   "std": 0.0011,
+   "CV Recall @0.5": 0.1551
+  }
+ ],
+ "results": [
+  {
+   "Model": "Baseline (majority)",
+   "Threshold": 0.5,
+   "ROC_AUC": 0.5,
+   "PR_AUC": 0.1529,
+   "Recall": 0.0,
+   "Precision": 0.0,
+   "F1": 0.0
+  },
+  {
+   "Model": "Logistic Regression",
+   "Threshold": 0.5,
+   "ROC_AUC": 0.8106,
+   "PR_AUC": 0.4121,
+   "Recall": 0.7601,
+   "Precision": 0.3183,
+   "F1": 0.4487
+  },
+  {
+   "Model": "Random Forest",
+   "Threshold": 0.5,
+   "ROC_AUC": 0.8171,
+   "PR_AUC": 0.442,
+   "Recall": 0.7434,
+   "Precision": 0.3334,
+   "F1": 0.4604
+  },
+  {
+   "Model": "Gradient Boosting",
+   "Threshold": 0.5,
+   "ROC_AUC": 0.8191,
+   "PR_AUC": 0.4466,
+   "Recall": 0.1673,
+   "Precision": 0.5965,
+   "F1": 0.2613
+  },
+  {
+   "Model": "Gradient Boosting (tuned + threshold)",
+   "Threshold": 0.142,
+   "ROC_AUC": 0.819,
+   "PR_AUC": 0.4459,
+   "Recall": 0.8121,
+   "Precision": 0.3098,
+   "F1": 0.4485
+  }
+ ],
+ "kcurve": [
+  {
+   "questions": 3,
+   "val_ROC_AUC": 0.7897460831936314,
+   "val_PR_AUC": 0.3980383924678112,
+   "share_of_full_AUC_above_0.5": 0.9117229376942206
+  },
+  {
+   "questions": 5,
+   "val_ROC_AUC": 0.8070596527147975,
+   "val_PR_AUC": 0.43001408181901496,
+   "share_of_full_AUC_above_0.5": 0.9662022883443614
+  },
+  {
+   "questions": 7,
+   "val_ROC_AUC": 0.8111311216918131,
+   "val_PR_AUC": 0.4353485784925285,
+   "share_of_full_AUC_above_0.5": 0.9790136838101453
+  },
+  {
+   "questions": 10,
+   "val_ROC_AUC": 0.8159807932778189,
+   "val_PR_AUC": 0.44383371499450314,
+   "share_of_full_AUC_above_0.5": 0.9942737928563496
+  },
+  {
+   "questions": 15,
+   "val_ROC_AUC": 0.8176705422495214,
+   "val_PR_AUC": 0.4465234239710118,
+   "share_of_full_AUC_above_0.5": 0.9995908031139719
+  },
+  {
+   "questions": 21,
+   "val_ROC_AUC": 0.8178005852593875,
+   "val_PR_AUC": 0.44801391899929105,
+   "share_of_full_AUC_above_0.5": 1.0
+  }
+ ]
+}

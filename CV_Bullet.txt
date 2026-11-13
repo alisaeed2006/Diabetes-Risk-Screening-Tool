@@ -1,0 +1,2 @@
+CV bullet (formula: action verb + what + data scale + result + tools):
+Built a diabetes risk-screening tool from 229,474 CDC survey responses, reducing the questionnaire to 7 key questions while keeping recall 80.8% (ROC-AUC 0.813); deployed as a Streamlit app (Python, scikit-learn, gradient boosting).

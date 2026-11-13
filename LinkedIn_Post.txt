@@ -1,0 +1,14 @@
+Millions of people have diabetes or prediabetes and don't know it. 🩺
+
+In my NextGen Institute ML internship, our team built a screening tool: answer a few questions, get a risk level and a clear "see a doctor" signal.
+
+• Trained and tuned 4 models on 229,474 real CDC survey responses
+• Our best model catches 81.2% of people with prediabetes/diabetes (ROC-AUC 0.82)
+• Just 7 questions keep 99% of the full model's performance
+• Biggest lesson: accuracy was misleading (85% of people are healthy). Recall and threshold choice were what mattered, because a missed patient costs more than an extra blood test.
+
+⚠️ It's a screening aid, not a diagnosis.
+
+Try the live app: [link] · Code: [GitHub link]
+Teammates: @[names] · @NextGen Institute
+#MachineLearning #DataScience #HealthcareAI #Streamlit
